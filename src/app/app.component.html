@@ -1,0 +1,86 @@
+<div class="body">
+    <div class="navmain">
+        <div class="a1st">
+            <p>MyApp</p>
+        </div>
+        <div class="a2nd">
+            <ul>
+                <li>Mine Business</li>
+                <li>Explore</li>
+                <li>English</li>
+                <li>Become Developer</li>
+                <li>SignIn</li>
+                <button class="btn2">Login</button>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mainBox">
+
+        <div class="box">
+            <div class="top1">
+                <p>Sign In to App</p>
+            </div>
+            <div class="mainBtn">
+                <div class="group2">
+
+                    <button>
+                        <div class="ght" id="googleButtonDiv"></div>Sign In with Google
+                    </button>
+                </div>
+
+                <div class="group1">
+                    <button (click)="handleLinkedInAuth()"> Sign in with
+                        LinkedIn</button>
+                </div>
+                <div class="group1">
+                    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
+                        data-layout="default" data-auto-logout-link="false" data-use-continue-as="true"
+                        (click)="handleFacebookSignIn()"></div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="or">
+                <p>OR</p>
+            </div>
+
+            <div class="form">
+                <form action="">
+                    <input type="email" placeholder="Email / UserName" name="email" id="">
+                    <input type="password" placeholder="Passsword" name="" id="">
+                    <button type="submit">Continue</button>
+                </form>
+            </div>
+            <div class="l1">
+                <div class="a1">
+                    <input type="checkbox" name="" id="">
+                    <span>Remember Me</span>
+                </div>
+                <div class="a2">
+                    <span>Forgot Password?</span>
+                </div>
+            </div>
+            <hr>
+            <div class="last">
+                <span>Not a member yet?</span>
+                <a href="http://">Join now</a>
+            </div>
+        </div>
+
+        <div class="maincard" style="
+        margin-top: -100px;" *ngIf="userDetails">
+            <p class="pat">Welcome, {{ userDetails.name }}!</p>
+            <div class="card" style="width: 18rem;">
+                <img [src]='userDetails.picture' class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ userDetails.name }}</h5>
+                    <p class="card-text">{{ userDetails.email }}</p>
+                    <a href="/" class="btn btn-primary">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
