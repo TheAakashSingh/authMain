@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "https://api.linkedin.com",
+      "secure": true,
+      "changeOrigin": true
+    }
+  }
+  
